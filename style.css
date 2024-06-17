@@ -58,9 +58,8 @@ h6 { font-size: 1.2rem; }
 p, li {
   line-height: 1.4; 
   margin-bottom: 1rem;
-  font-family: 'Martel', serif; 
-  font-weight: 200;
-  font-size: 1rem;
+  font-weight: normal;
+  font-size: 1.1rem;
 }
 
 h2:last-child, 
@@ -338,7 +337,41 @@ nav a:hover {
 
 
 /* ------------------------- Contact Forms  --------------------------- */
+form input, 
+form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 2px solid rgb(220,220,220);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
 
+form input:focus,
+form textarea:focus {
+  border-color: teal;
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+form label {
+  margin-top: 1rem;
+  display: block;
+  color: #6C7A89;
+  font-weight: bold;
+}
+
+form button {
+  background-color:#6C7A89;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.1em;
+  margin: 0.5rem 0;
+} 
 
 
 /* --------------------- Blogging elements  ---------------------------- */
