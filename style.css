@@ -14,6 +14,13 @@ img { max-width: 100%; height: auto; }
 
 section { position: relative; }
 
+/* TEMPORARY STYLES REMOVE LATER## */
+section,
+div,
+header,
+footer,
+a {border: 2px solid grey;}
+
 /* ------------------------ CSS Variables ------------------------------- */
 :root {
   --dark: #112c36;
@@ -33,7 +40,7 @@ section { position: relative; }
 .uppercase    { text-transform: uppercase; }
 
 body {
-  font-family: 'Mulish', serif;  /* Add your font here */ 
+  font-family: 'Lato', serif;  /* Add your font here */ 
   color: var(--dark-text);
 }
 
@@ -276,6 +283,58 @@ nav a:hover {
     font-weight: normal;
   }
 
+/* --------------------- Footer Styles -------------------------------- */
+
+/* ---------------------- Adoption Slider ----------------------------- */
+/* slider */
+.slider-container {
+  padding: 5%;
+  border: 2px solid blue;
+}
+
+.slider-item {
+  padding: 1rem;
+  border: 2px solid orange;
+}
+
+/*brings arrows into the container; was -25px by default; 2% because beginning of arrow is 2% in the padding of 5% around the div */
+.slick-next {
+  right: 2%;
+}
+.slick-prev {
+  left: 2%;
+}
+
+/* slick dots höhe anpassen mithilfe von inspector; zu finden in ul class="slick-dots"; negativ = außerhalb des containers (=default), positiv = innerhalb des containers */
+.slick-dots {
+  bottom: 12px;
+  left: 0; /* This aligns the dots perfectly to the center (quirk in slick.js), do not delete */
+}
+
+/* punkte näher aneinanderrücken */
+.slick-dots li {
+  width: 15px;
+}
+
+/*to make arrows visible because they are white by default (code from inspector */
+.slick-next::before,
+.slick-prev::before {
+  font-family: slick;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.5;
+  color: black;
+}
+
+/* farbe der dots ändern */
+.slick-dots li button::before {
+  color: teal;
+}
+
+/* farbe des aktiven punkts auch ändern */
+.slick-dots li.slick-active button::before {
+  color: teal;
+}
 
 
 /* ------------------------- Contact Forms  --------------------------- */
@@ -319,6 +378,7 @@ nav a:hover {
 .vh70  { min-height: 70vh; }
 .vh60  { min-height: 60vh; }
 .vh50  { min-height: 50vh; }
+.vh40  { min-height: 40vh; }
 
 /* Padding Utility Classes */ 
 .padded-sm { padding: 2.5%; }

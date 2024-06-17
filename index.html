@@ -1,5 +1,30 @@
 ---
 layout: default
 title: Homepage
+banner_image: /images/TSP-3.jpg
+paypal_url: https://www.paypal.com/donate?token=zagr621ZNDWnZHpmoK_YwHsRhgzTWPADWHYdbtc0ducDPWh3osXZOX2R-l93fv65-_5gkIU9fci4lVOA
+cute-dog_image: /images/TSP-5.jpg
 ---
-<h1>Welcome to your homepage!</h1>
+<!-- donation banner -->
+<section class="grid">
+    <div class="col-12 donation-banner bg-image center vh40 bg-overlay" style="background-image: url('{{page.banner_image}}')">
+        <h2>Help us to help dogs in need</h2>
+        <a href="{{page.paypal_url}}" class="button">Donate today</a>
+    </div>
+</section>
+
+<!-- small actions big impact -->
+<section class="grid padded">
+    <h2 class="col-12 center">Small actions, big impact.</h2>
+    <div class="col-6">
+        <div class="bg-image landscape-wide" style="background-image: url('{{page.cute-dog_image}}')"></div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae exercitationem voluptates, ad eaque rem perspiciatis quod voluptatibus sequi, doloribus ratione soluta porro. Explicabo dignissimos esse voluptate exercitationem cumque temporibus necessitatibus?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo omnis sunt ut. Quidem consequuntur fuga non quod suscipit numquam nesciunt deleniti in, rem eligendi est voluptatibus? Eius consectetur aperiam voluptates.</p>
+    </div>
+    <div class="col-6">
+        #donation box link embed
+    </div>
+</section>
+
+{% include adoption-banner.html %}
+
