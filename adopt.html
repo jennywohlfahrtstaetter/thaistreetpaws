@@ -1,8 +1,12 @@
 ---
 layout: default
 title: Adopt
-adopt-dog_image: /images/TSP-1.jpg
+adopt-dog_image: /images/TSP-4.jpg
 cost-dog_image: /images/TSP-2.jpg
+dogs:
+ - name: Lanta
+   age: 4
+   _image: /images/TSP-3.jpg
 ---
 <!-- intro -->
 <section class="padded">
@@ -14,28 +18,42 @@ cost-dog_image: /images/TSP-2.jpg
 
 <!-- banner -->
 <section class="bg-featured padded center">
-    <h2>find out more about the <br> adoption process</h2>
+    <h2>Find out more about the <br>adoption process</h2>
     <a href="#adoption-process">
         <i class="fa-solid fa-angle-down margin-t-2"></i>
     </a>
 </section>
 
 <!-- dogs -->
-<section>
+<section class="grid-center">
+{% for dog in page.dogs %}
+
+    <div class="col-3">
+        <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
+        <h3>{{dog.name}}</h3>
+        <h4>I am {{dog.age}} years old.</h4>
+    </div>
+    
+
+{% endfor %}
 
 </section>
 
 <!-- adoption info -->
-<section class="grid" id="adoption-process">
-    <div class="col-6_sm-12 padded">
+<section class="grid-middle padded" id="adoption-process">
+    <div class="col-7_sm-12">
         <h3>How to adopt</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>
         <a href="#" class="button">Reach out to us</a>
     </div>
-    <div class="col-6 bg-image sm-hide" style="background-image: url('{{page.adopt-dog_image}}');"></div>
+    <div class="col-5 padded">
+        <div class="bg-image square sm-hide" style="background-image: url('{{page.adopt-dog_image}}');"></div>
+    </div>
 
-    <div class="col-6 bg-image sm-hide" style="background-image: url('{{page.cost-dog_image}}');"></div>
-    <div class="col-6_sm-12 padded">
+    <div class="col-5 padded">
+    <div class="bg-image square sm-hide" style="background-image: url('{{page.cost-dog_image}}');"></div>
+    </div>
+    <div class="col-7_sm-12">
         <h3>What's the cost?</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>
     </div>
