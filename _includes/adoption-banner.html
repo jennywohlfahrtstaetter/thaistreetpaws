@@ -1,6 +1,8 @@
 <!-- adoption banner -->
 <section class="padded center">
     <h2 class="center">Meet the pups</h2>
+
+    <!-- slick function -->
     <div class="slider-container">
         <div class="slider-item bg-image"> </div>
         <div class="slider-item bg-image"> </div>
@@ -8,5 +10,20 @@
         <div class="slider-item bg-image"> </div>
         <div class="slider-item bg-image"> </div>
     </div>
+
     <a href="/adopt.html" class="button">Adopt a dog</a>
 </section>
+
+
+<!-- 
+
+
+{% for dog in page.dogs %}
+
+    <div class="center padded-1">
+        <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
+        <h3>{{dog.name}}</h3>
+        <p>I am {{dog.age}} years old.</p>
+    </div>
+    
+{% endfor %} -->

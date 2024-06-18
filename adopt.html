@@ -7,6 +7,15 @@ dogs:
  - name: Lanta
    age: 4
    _image: /images/TSP-3.jpg
+ - name: Martha
+   age: 2
+   _image: /images/TSP-2.jpg
+ - name: Isabella
+   age: 7
+   _image: /images/TSP-4.jpg
+ - name: Jaguar
+   age: 3
+   _image: /images/TSP-1.jpg
 ---
 <!-- intro -->
 <section class="padded">
@@ -24,17 +33,16 @@ dogs:
     </a>
 </section>
 
-<!-- dogs -->
-<section class="grid-center">
+<!-- dogs grid -->
+<section class="grid-center padded">
 {% for dog in page.dogs %}
 
-    <div class="col-3">
+    <div class="col-3 center padded-1">
         <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
         <h3>{{dog.name}}</h3>
-        <h4>I am {{dog.age}} years old.</h4>
+        <p>I am {{dog.age}} years old.</p>
     </div>
     
-
 {% endfor %}
 
 </section>
