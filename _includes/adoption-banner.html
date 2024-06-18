@@ -1,19 +1,14 @@
 <!-- adoption banner -->
 <section class="padded-lr padded-tb center bg-featured">
     <h2 class="center">Meet the pups</h2>
-
-    <!-- slick carousel -->
+    
+    <!-- slick carousel with loop (front matter from adopt page) -->
     <div class="slick-carousel">
-        <div class="slider-item bg-image" style="background-image: url('/images/TSP-1.jpg');"> </div>
-        <div class="slider-item bg-image"> </div>
-        <div class="slider-item bg-image"> </div>
-        <div class="slider-item bg-image"> </div>
-        <div class="slider-item bg-image"> </div>
-        <div class="slider-item bg-image"> </div>
-        <div class="slider-item bg-image"> </div>
-        <div class="slider-item bg-image"> </div>
-        <div class="slider-item bg-image"> </div>
+        {% assign adoptable-dogs = site.pages | where: 'path', 'adopt.html' | first %}
+        {% for dog in adoptable-dogs.dogs %}
+        <div class="slider-item bg-image" style="background-image: url('{{dog._image}}');"></div>
+    
+        {% endfor %}
     </div>
-
     <a href="/adopt.html" class="button">Adopt a dog</a>
 </section>

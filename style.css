@@ -14,8 +14,8 @@ img { max-width: 100%; height: auto; }
 
 section { position: relative; }
 
-/* TEMPORARY STYLES REMOVE LATER##
-section,
+/* TEMPORARY STYLES REMOVE LATER## */
+/* section,
 div,
 header,
 footer,
@@ -294,7 +294,7 @@ nav a:hover {
   /* ------------ NEW NEW NEW NEW NEW ------ adjust padding between items */
   margin: 0.25rem;
   display: none;
-  padding-bottom: 5%;
+  padding-bottom: 6%;
 }
 
 .slider-item:first-child {
@@ -303,11 +303,11 @@ nav a:hover {
 
 .slick-next {
   right: -4%;
-  top: 40%;
+  top: 42%;
 }
 .slick-prev {
   left: -5%;
-  top: 40%;
+  top: 42%;
 }
 
 .slick-dots {
