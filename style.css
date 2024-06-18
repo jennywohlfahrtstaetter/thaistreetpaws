@@ -304,6 +304,8 @@ footer a {
 
 .inline-block { display: inline-block;}
 
+.big-icon { font-size: 3.5rem;}
+
 /* ---------------------- Adoption Slider ----------------------------- */
 /* slider */
 .slick-carousel {
@@ -366,36 +368,47 @@ form textarea {
   width: 100%;
   margin: 0.5rem 0;
   padding: 0.5rem;
-  border: 2px solid rgb(220,220,220);
+  border: 2px solid var(--featured);
   outline: none;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: teal;
+  border-color: var(--dark);
 }
 
 textarea {
-  min-height: 4rem;
+  min-height: 8rem;
 }
 
 form label {
   margin-top: 1rem;
+  margin-left: 0.2rem;
   display: block;
-  color: #6C7A89;
-  font-weight: bold;
+  color: var(--medium);
+  font-weight: normal;
 }
 
 form button {
-  background-color:#6C7A89;
-  color: white;
-  border: none;
-  padding: 0.5rem 2rem;
-  letter-spacing: 0.1em;
+  background: none;
+  color: var(--medium);
+  border: 1px solid;
+  padding: 0.5rem 1.5rem;
   margin: 0.5rem 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  font-size: 1rem;
 } 
+
+
+form button:hover {
+  color: var(--featured);
+  background: var(--dark);
+  border: 1px solid var(--dark);
+}
 
 
 /* --------------------- Blogging elements  ---------------------------- */
@@ -497,7 +510,7 @@ form button {
 .margin-t-05 { margin-top: 0.5rem; }
 .margin-b-05 { margin-bottom: 0.5rem; }
 .margin-l-05 { margin-left: 0.5rem; }
-.margin-r-05 { margin-right: 0.5rem; }
+.margin-r-03 { margin-right: 0.3rem; }
 
 .margin-t-1 { margin-top: 1rem; }
 .margin-b-1 { margin-bottom: 1rem; }
