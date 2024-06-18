@@ -285,7 +285,53 @@ nav a:hover {
 /* --------------------- Footer Styles -------------------------------- */
 
 /* ---------------------- Adoption Slider ----------------------------- */
+/* slider */
+.slick-carousel {
+  padding: 5%;
+}
 
+.slider-item {
+  /* ------------ NEW NEW NEW NEW NEW ------ adjust padding between items */
+  padding: 0.25rem;
+  display: none;
+}
+
+.slider-item:first-child {
+  display: block;
+}
+
+.slick-next {
+  right: 2%;
+}
+.slick-prev {
+  left: 2%;
+}
+
+.slick-dots {
+  bottom: 12px;
+  left: 0;
+}
+
+.slick-dots li {
+  width: 15px;
+}
+
+.slick-next::before,
+.slick-prev::before {
+  font-family: slick;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.5;
+  color: teal;
+}
+
+.slick-dots li button::before {
+  color: teal;
+}
+
+.slick-dots li.slick-active button::before {
+  color: teal;
+}
 
 /* ------------------------- Contact Forms  --------------------------- */
 form input, 
