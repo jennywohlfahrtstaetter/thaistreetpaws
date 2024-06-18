@@ -10,8 +10,8 @@ $(document).ready(function(){
     fade: false,
     pauseOnHover: false,
     pauseOnDotsHover: true,
-    slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToShow: 5,
+    slidesToScroll: 5
   });
 });
 		

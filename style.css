@@ -14,22 +14,22 @@ img { max-width: 100%; height: auto; }
 
 section { position: relative; }
 
-/* TEMPORARY STYLES REMOVE LATER## */
+/* TEMPORARY STYLES REMOVE LATER##
 section,
 div,
 header,
 footer,
-a {border: 2px solid grey;}
+a {border: 2px solid grey;} */
 
 /* ------------------------ CSS Variables ------------------------------- */
 :root {
   --dark: #112c36;
-  --featured: lightblue;
+  --featured: #FAD9DB;
   --medium: rgb(70, 178, 236);
-  --light: #c8e8f4;
+  --light: #FCEAEB;
   --v-light: #ebfafe;
   --light-text: #fff;
-  --featured-text: lightblue;
+  --featured-text:#9D131C;
 }
 
 /* ---------------------- Typography Styles ----------------------------- */
@@ -287,13 +287,14 @@ nav a:hover {
 /* ---------------------- Adoption Slider ----------------------------- */
 /* slider */
 .slick-carousel {
-  padding: 5%;
+  padding-bottom: 5%;
 }
 
 .slider-item {
   /* ------------ NEW NEW NEW NEW NEW ------ adjust padding between items */
-  padding: 0.25rem;
+  margin: 0.25rem;
   display: none;
+  padding-bottom: 5%;
 }
 
 .slider-item:first-child {
@@ -301,10 +302,12 @@ nav a:hover {
 }
 
 .slick-next {
-  right: 2%;
+  right: -4%;
+  top: 40%;
 }
 .slick-prev {
-  left: 2%;
+  left: -5%;
+  top: 40%;
 }
 
 .slick-dots {
@@ -319,18 +322,22 @@ nav a:hover {
 .slick-next::before,
 .slick-prev::before {
   font-family: slick;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1;
   opacity: 0.5;
-  color: teal;
+  color: #9D131C;
 }
 
 .slick-dots li button::before {
-  color: teal;
+  color: #9D131C;
 }
 
 .slick-dots li.slick-active button::before {
-  color: teal;
+  color: #9D131C;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 10px;
 }
 
 /* ------------------------- Contact Forms  --------------------------- */
@@ -424,8 +431,8 @@ form button {
 .padded-l  { padding-left: 5%; }
 .padded-r  { padding-right: 5%; }
 
-.padded-tb  { padding-top: 5%; padding-bottom: 5%; }
-.padded-lr  { padding-left: 5%; padding-right: 5%; }
+.padded-tb  { padding-top: 3%; padding-bottom: 3%; }
+.padded-lr  { padding-left: 8%; padding-right: 8%; }
 
 .padded-t-1 { padding-top: 1rem; }
 .padded-b-1 { padding-bottom: 1rem; }
