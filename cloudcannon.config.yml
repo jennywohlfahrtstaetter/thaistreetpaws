@@ -34,5 +34,9 @@ _inputs:
     type: text
     hidden: true
     cascade: true
+  title:
+    type: text
+    hidden: true
+    cascade: true
 data_config: {}
 timezone: Etc/UTC
