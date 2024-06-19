@@ -17,7 +17,7 @@ info-dog_image: /images/TSP-9.jpg
   {% for dog in all-dogs.dogs limit: 4 %}
   
       <div class="col-3 center padded-1">
-          <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
+          <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
           <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
           <p>I am {{dog.age}} years old.</p>
       </div>
@@ -40,7 +40,7 @@ info-dog_image: /images/TSP-9.jpg
 {% for dog in all-dogs.dogs limit: 8 offset: 4%}
 
     <div class="col-3 center padded-1 margin-b-2">
-        <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
+        <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
         <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
         <p>I am {{dog.age}} years old.</p>
     </div>
@@ -58,7 +58,15 @@ info-dog_image: /images/TSP-9.jpg
   <!-- how to adopt -->
     <div class="col-7_sm-12-middle padded">
       <h3>How to adopt</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>
+      <p>If you see a dog that you're interested in adopting, you'll need to follow these simple steps:</p>
+      <ol class="padded">
+        <li class="padded-l-1">Fill in the <a href="">application form</a> and return.</li>
+        <li class="padded-l-1">If your application passes the first round, you will be scheduled for a Skype / FaceTime interview.</li>
+        <li class="padded-l-1">If your application is approved, we will begin looking for a flight angel from Bangkok to an airport near you.</li>
+        <li class="padded-l-1">Once the flight angel is secured, travel necessities will be bought and all paperwork completed<./li>
+        <li class="padded-l-1">On their arrival, you will meet the flight angel and your dog at the airport.</li>
+      </ol>
+      <p>If you're interested in one of the dogs please send a message so we can start the process.</p>
       <a href="#" class="button">Reach out to us</a>
     </div>
     <div class="col-5 padded">
@@ -80,7 +88,18 @@ info-dog_image: /images/TSP-9.jpg
     <!-- whats the cost -->
     <div class="col-7_sm-12-middle padded">
         <h3>What's the cost?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>
+        <p>There is no adoption fee when you adopt a Thai Street Paws dog but you will need to pay for the dog's travel costs.
+        <p class="margin-b-0">These include the following:</p>
+          
+        <ul class="padded">
+          <li class="padded-l-1">IATA approved travel crate</li>
+          <li class="padded-l-1"> Microchip</li>
+          <li class="padded-l-1">Paperwork fees for export and import of dog</li>
+          <li class="padded-l-1">Flight from Hat Yai to Bangkok</li>
+          <li class="padded-l-1">Flight from Bangkok to your nearest airport (this cost is significantly reduced when the dog flies with a flight angel)</li>
+          <li class="padded-l-1">Lodging for the dog and Tamara in Bangkok</li>
+        </ul>
+          <p>Costs vary relative to the size of the dog, as well as the airline. Typically, costs range between US$350 to US$500.</p>
     </div>
     <div class="col-5 padded">
       <div class="bg-image square sm-hide" style="background-image: url('{{page.cost-dog_image}}');"></div>

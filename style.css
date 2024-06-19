@@ -56,9 +56,15 @@ h4 { font-size: 2rem; }
 h5 { font-size: 1.8rem; }
 h6 { font-size: 1.6rem; }
 
-p, li, a {
+p, a {
   line-height: 1.4; 
   margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+li {
+  line-height: 1.4;
   font-weight: 300;
   font-size: 1.3rem;
 }

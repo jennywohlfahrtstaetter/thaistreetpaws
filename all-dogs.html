@@ -5,6 +5,7 @@ dogs:
       name: Lanta
       age: 4
       dog_image: /images/TSP-3.jpg
+      male: true
    -
       name: Martha
       age: 2
@@ -119,6 +120,11 @@ dogs:
             <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
             <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
             <p>I am {{dog.age}} years old.</p>
+            {% if dog.male == true %}
+               <p>I am male.</p>
+               {% else %}
+               <p>I am female.</p>
+               {% endif %}
         </div>
     {% endfor %}
 </section>
