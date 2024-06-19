@@ -6,25 +6,22 @@ paypal_url: https://www.paypal.com/donate?token=zagr621ZNDWnZHpmoK_YwHsRhgzTWPAD
 cute-dog_image: /images/TSP-5.jpg
 ---
 
-<!-- donation banner -->
-<section class="grid">
-    <div class="col-12 donation-banner bg-image center vh40 bg-overlay" style="background-image: url('{{page.banner_image}}')">
-        <h2>Help us to help dogs in need</h2>
-        <a href="{{page.paypal_url}}" class="button">Donate today</a>
-    </div>
-</section>
+{% include donation-banner.html %}
 
 <!-- small actions big impact -->
 <section class="grid padded">
     <h2 class="col-12 center">Small actions, big impact.</h2>
-    <div class="col-6">
-        <div class="bg-image landscape-wide" style="background-image: url('{{page.cute-dog_image}}')"></div>
+    <div class="col-6 padded">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae exercitationem voluptates, ad eaque rem perspiciatis quod voluptatibus sequi, doloribus ratione soluta porro. Explicabo dignissimos esse voluptate exercitationem cumque temporibus necessitatibus?</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo omnis sunt ut. Quidem consequuntur fuga non quod suscipit numquam nesciunt deleniti in, rem eligendi est voluptatibus? Eius consectetur aperiam voluptates.</p>
+     </div>
+    <div class="col-6 padded-sm">
+        <div class="bg-image landscape" style="background-image: url('{{page.cute-dog_image}}')"></div>
     </div>
-    <div class="col-6">
+    
+    <!-- <div class="col-6">
         #donation box link embed
-    </div>
+    </div> -->
 </section>
 
 {% include adoption-banner.html %}

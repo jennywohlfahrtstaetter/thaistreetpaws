@@ -46,7 +46,7 @@ body {
 
 h2, h3, h4, h5, h6 {
   line-height: 1.1;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 { font-size: 2.2rem; }
@@ -62,6 +62,7 @@ p, li, a {
   font-size: 1.1rem;
 }
 
+
 h2:last-child, 
 h3:last-child, 
 h4:last-child, 
@@ -70,6 +71,7 @@ h6:last-child,
 p:last-child {
 	margin-bottom: 0;
 }
+
 
 /* Unique Typography Styles  */
 .emphasis       { font-size: 1.2rem; }
@@ -194,18 +196,17 @@ header {
 
 nav a {
     padding: 0.25rem 0.5rem;
+    margin-left: 0.8rem;
     display: inline-block;
     text-decoration: none;
     text-transform: capitalize;
+    letter-spacing: 0.03rem;
+    font-size: 1.3rem;
 }
+
 nav a:hover {
   color: var(--featured-text);
 }
-
-.logo {
-  text-decoration: none;
-  font-size: 2.5rem;
-} 
 
 
 /* Dropdown styles */
@@ -467,6 +468,8 @@ form button:hover {
 .vh60  { min-height: 60vh; }
 .vh50  { min-height: 50vh; }
 .vh40  { min-height: 40vh; }
+.vh30  { min-height: 30vh; }
+
 
 /* Padding Utility Classes */ 
 .padded-sm { padding: 2.5%; }
@@ -483,7 +486,7 @@ form button:hover {
 .padded-r  { padding-right: 5%; }
 
 .padded-tb  { padding-top: 3%; padding-bottom: 3%; }
-.padded-lr  { padding-left: 8%; padding-right: 8%; }
+.padded-lr  { padding-left: 5%; padding-right: 5%; }
 
 .padded-t-1 { padding-top: 1rem; }
 .padded-b-1 { padding-bottom: 1rem; }
