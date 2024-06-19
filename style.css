@@ -24,9 +24,9 @@ a {border: 2px solid grey;} */
 /* ------------------------ CSS Variables ------------------------------- */
 :root {
   --dark: #4c090e;
-  --featured: #FAD9DB;
+  --featured: #f8c8cb;
   --medium: #9D131C;
-  --light: #FCEAEB;
+  --light: #FAD9DB;
   --v-light: #FCEAEB;
   --light-text: #fff;
   --featured-text:#9D131C;
@@ -83,6 +83,7 @@ p:last-child {
 .copyright      { font-size: 0.9rem; opacity: 0.8;}
 .small-text     { font-weight: 300;}
 .big-text       { font-size: 3rem;}
+.bold           { font-weight: 500;}
 
 /* Gridlex Flip Flex */
 
@@ -443,9 +444,9 @@ form button:hover {
 .quote-icon {
   font-family: 'Catamaran', sans-serif;
   font-size: 5rem;
+  color: var(--featured-text);
   display: inline-block;
   /* für genauere Positionierung */
-  color: rgb(120,120,125);
   line-height: 1;
   margin-top: -0.5rem;
 }

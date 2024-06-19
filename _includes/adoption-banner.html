@@ -4,8 +4,8 @@
     
     <!-- slick carousel with loop (front matter from adopt page) -->
     <div class="slick-carousel">
-        {% assign adoptable-dogs = site.pages | where: 'path', 'adopt.html' | first %}
-        {% for dog in adoptable-dogs.dogs %}
+        {% assign all-dogs = site.pages | where: 'path', 'all-dogs.html' | first %}
+        {% for dog in all-dogs.dogs %}
         <div class="slider-item">
             <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
         </div>

@@ -4,74 +4,17 @@ title: Adopt
 adopt-dog_image: /images/TSP-4.jpg
 cost-dog_image: /images/TSP-2.jpg
 info-dog_image: /images/TSP-9.jpg
-dogs:
- - name: Lanta
-   age: 4
-   _image: /images/TSP-3.jpg
- - name: Martha
-   age: 2
-   _image: /images/TSP-2.jpg
- - name: Isabella
-   age: 7
-   _image: /images/TSP-4.jpg
- - name: Jaguar
-   age: 3
-   _image: /images/TSP-1.jpg
- - name: Freya
-   age: 4
-   _image: /images/TSP-3.jpg
- - name: Martha
-   age: 2
-   _image: /images/TSP-2.jpg
- - name: Isabella
-   age: 7
-   _image: /images/TSP-4.jpg
- - name: Jaguar
-   age: 3
-   _image: /images/TSP-1.jpg
- - name: Lanta
-   age: 4
-   _image: /images/TSP-3.jpg
- - name: Martha
-   age: 2
-   _image: /images/TSP-2.jpg
- - name: Isabella
-   age: 7
-   _image: /images/TSP-4.jpg
- - name: Jaguar
-   age: 3
-   _image: /images/TSP-1.jpg
- - name: Lanta
-   age: 4
-   _image: /images/TSP-3.jpg
- - name: Martha
-   age: 2
-   _image: /images/TSP-2.jpg
- - name: Isabella
-   age: 7
-   _image: /images/TSP-4.jpg
- - name: Jaguar
-   age: 3
-   _image: /images/TSP-1.jpg
- - name: Martha
-   age: 2
-   _image: /images/TSP-2.jpg
- - name: Isabella
-   age: 7
-   _image: /images/TSP-4.jpg
- - name: Jaguar
-   age: 3
-   _image: /images/TSP-1.jpg
 ---
 
 <!-- intro banner -->
-<section class="grid-middle bg-light vh30">
+<section class="grid-middle bg-featured vh30">
   <h2 class="col-12 center">Meet the pups</h2>
 </section>
 
 <!-- dogs grid short -->
 <section class="grid-center padded">
-  {% for dog in page.dogs limit: 4 %}
+  {% assign all-dogs = site.pages | where: 'path', 'all-dogs.html' | first %}
+  {% for dog in all-dogs.dogs limit: 4 %}
   
       <div class="col-3 center padded-1">
           <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
@@ -95,7 +38,7 @@ dogs:
 
 <!-- dogs grid -->
 <section class="grid-center padded">
-{% for dog in page.dogs limit: 8 offset: 4%}
+{% for dog in all-dogs.dogs limit: 8 offset: 4%}
 
     <div class="col-3 center padded-1 margin-b-2">
         <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
@@ -106,7 +49,7 @@ dogs:
 {% endfor %}
 
     <div>
-      <a href="#" class="button">See all dogs</a>
+      <a href="/all-dogs.html" class="button">See all dogs</a>
     </div>
 </section>
 

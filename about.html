@@ -3,6 +3,7 @@ layout: default
 title: About
 about_image: /images/TSP-7.jpg
 ---
+
 <!-- our story -->
 <section class="grid-spaceBetween padded-lg bg-light">
     <div class="col-7-middle">
@@ -11,12 +12,25 @@ about_image: /images/TSP-7.jpg
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quam nobis aliquid officiis laudantium iste cumque error rem doloribus perferendis optio perspiciatis labore sint, cum ipsam veritatis quae. Quasi, est.</p>
     </div>
     <div class="col-4">
-        <div class="bg-image square" style="background-image: url('{{page.about_image}}');">
-
-        </div>
+        <div class="bg-image square" style="background-image: url('{{page.about_image}}');"></div>
     </div>
 </section>
 
+<!-- quote -->
+<section class="padded">
+    <div class="capped-width grid">
+        <div class="col-1 right featured-text">
+            <span class="quote-icon">“</span>
+        </div>
+        <div class="col-10">
+            <p class="center text-md featured-text bold">I know I can't save every single one, but I want to help as many as I can.</p>
+            <p class="right subtitle featured-text"> – Tamara Johnston</p>
+        </div>
+        <div class="col-1"> 
+            <span class="quote-icon featured-text">”</span>
+        </div>
+    </div>
+</section>
 
 {% include donation-banner.html %}
 
