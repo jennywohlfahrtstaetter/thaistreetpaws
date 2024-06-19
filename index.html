@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Homepage
-banner_image: /images/TSP-3.jpg
+donation-banner_image: /images/TSP-3.jpg
 paypal_url: https://www.paypal.com/donate?token=zagr621ZNDWnZHpmoK_YwHsRhgzTWPADWHYdbtc0ducDPWh3osXZOX2R-l93fv65-_5gkIU9fci4lVOA
 dog-sanctuary_image: /images/TSP-6.jpg
 ---
@@ -24,18 +24,20 @@ dog-sanctuary_image: /images/TSP-6.jpg
     </div> -->
 </section>
 
-{% include adoption-banner.html %}
-
 <!-- quote -->
-<section class="grid padded capped-width">
-    <div class="col-1 right">
-            <span class="quote-icon">“</span>
+<section class="padded bg-light">
+    <div class="capped-width grid">
+        <div class="col-1 right">
+                <span class="quote-icon">“</span>
+        </div>
+        <div class="col-10">
+            <p class="center text-md font-weight-light">I know I can't save every single one, but I want to help as many as I can.</p>
+            <p class="right subtitle"> – Tamara Johnston</p>
+        </div>
+        <div class="col-1"> 
+        <span class="quote-icon">”</span>
     </div>
-    <div class="col-10">
-        <p class="center text-md font-weight-light">I know I can't save every single one, but I want to help as many as I can.</p>
-        <p class="right subtitle"> – Tamara Johnston</p>
     </div>
-    <div class="col-1"> 
-       <span class="quote-icon">”</span>
-   </div>
 </section>
+
+{% include adoption-banner.html %}

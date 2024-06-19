@@ -3,6 +3,7 @@ layout: default
 title: Adopt
 adopt-dog_image: /images/TSP-4.jpg
 cost-dog_image: /images/TSP-2.jpg
+info-dog_image: /images/TSP-9.jpg
 dogs:
  - name: Lanta
    age: 4
@@ -63,17 +64,14 @@ dogs:
    _image: /images/TSP-1.jpg
 ---
 
-<!-- intro -->
-<section class="padded bg-light">
-    <h2>Meet the pups</h2>
-    <p>Unfortunately we do not have the time and resources to describe every single one of our 160+ dogs online. </p>
-    <p>If you are interested in one of the pups or are looking for more information please don’t hesitate to reach out directly to us! we will provide you with all information you need to find your new best friend.</p>
-    <a href="/contact.html" class="button">I need more information</a>
+<!-- intro banner -->
+<section class="grid-middle bg-light vh30">
+  <h2 class="col-12 center">Meet the pups</h2>
 </section>
 
 <!-- dogs grid short -->
 <section class="grid-center padded">
-  {% for dog in page.dogs | limit: 4 %}
+  {% for dog in page.dogs limit: 4 %}
   
       <div class="col-3 center padded-1">
           <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
@@ -85,7 +83,8 @@ dogs:
   
   </section>
 
-<!-- banner #make jumping arrow! AOS -->
+
+<!-- adoption process banner -->
 <section class="bg-dark light-text padded center">
     <h2 class="small-text margin-b-05">Find out more about the </h2>
     <a href="#adoption-process">
@@ -96,7 +95,7 @@ dogs:
 
 <!-- dogs grid -->
 <section class="grid-center padded">
-{% for dog in page.dogs | limit: 8, offset: 4%}
+{% for dog in page.dogs limit: 8 offset: 4%}
 
     <div class="col-3 center padded-1">
         <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
@@ -106,25 +105,43 @@ dogs:
     
 {% endfor %}
 
+    <div>
+      <a href="#" class="button">See all dogs</a>
+
+    </div>
 </section>
 
 
 <!-- adoption info -->
-<section class="grid-middle padded bg-light" id="adoption-process">
+<section class="grid-middle-spaceBetween padded bg-light" id="adoption-process">
+  <!-- how to adopt -->
     <div class="col-7_sm-12">
-        <h3>How to adopt</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>
-        <a href="#" class="button">Reach out to us</a>
+      <h3>How to adopt</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>
+      <a href="#" class="button">Reach out to us</a>
     </div>
-    <div class="col-5 padded">
-        <div class="bg-image square sm-hide" style="background-image: url('{{page.adopt-dog_image}}');"></div>
+    <div class="col-4">
+      <div class="bg-image square sm-hide" style="background-image: url('{{page.adopt-dog_image}}');"></div>
     </div>
 
-    <div class="col-5 padded">
-    <div class="bg-image square sm-hide" style="background-image: url('{{page.cost-dog_image}}');"></div>
+    <!-- more info -->
+    <div class="col-4">
+      <div class="bg-image square sm-hide" style="background-image: url('{{page.info-dog_image}}');"></div>
     </div>
+    <div class="col-7_sm-12">
+      <h3>Get more information</h3>
+      <p>Unfortunately we do not have the time and resources to describe every single one of our 160+ dogs online. </p>
+      <p>If you are interested in one of the pups or are looking for more information please don’t hesitate to reach out directly to us! We will provide you with all information you need to find your new best friend.</p>
+      <a href="/contact.html" class="button">I need more information</a>
+    </div>
+    
+  
+    <!-- whats the cost -->
     <div class="col-7_sm-12">
         <h3>What's the cost?</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>
+    </div>
+    <div class="col-4">
+      <div class="bg-image square sm-hide" style="background-image: url('{{page.cost-dog_image}}');"></div>
     </div>
 </section>
