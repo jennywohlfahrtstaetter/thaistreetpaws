@@ -126,9 +126,10 @@ dogs:
             <p>I am {{dog.age}} years old.</p>
             {% if dog.male == true %}
                <p>I am male.</p>
-               {% else %}
+            {% endif %}
+            {% if dog.female == true %}
                <p>I am female.</p>
-               {% endif %}
+            {% endif %}
         </div>
     {% endfor %}
 </section>
