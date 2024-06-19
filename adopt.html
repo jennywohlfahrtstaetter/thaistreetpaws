@@ -16,6 +16,18 @@ dogs:
  - name: Jaguar
    age: 3
    _image: /images/TSP-1.jpg
+ - name: Freya
+   age: 4
+   _image: /images/TSP-3.jpg
+ - name: Martha
+   age: 2
+   _image: /images/TSP-2.jpg
+ - name: Isabella
+   age: 7
+   _image: /images/TSP-4.jpg
+ - name: Jaguar
+   age: 3
+   _image: /images/TSP-1.jpg
  - name: Lanta
    age: 4
    _image: /images/TSP-3.jpg
@@ -28,27 +40,63 @@ dogs:
  - name: Jaguar
    age: 3
    _image: /images/TSP-1.jpg
+ - name: Lanta
+   age: 4
+   _image: /images/TSP-3.jpg
+ - name: Martha
+   age: 2
+   _image: /images/TSP-2.jpg
+ - name: Isabella
+   age: 7
+   _image: /images/TSP-4.jpg
+ - name: Jaguar
+   age: 3
+   _image: /images/TSP-1.jpg
+ - name: Martha
+   age: 2
+   _image: /images/TSP-2.jpg
+ - name: Isabella
+   age: 7
+   _image: /images/TSP-4.jpg
+ - name: Jaguar
+   age: 3
+   _image: /images/TSP-1.jpg
 ---
 
 <!-- intro -->
-<section class="padded">
+<section class="padded bg-light">
     <h2>Meet the pups</h2>
     <p>Unfortunately we do not have the time and resources to describe every single one of our 160+ dogs online. </p>
     <p>If you are interested in one of the pups or are looking for more information please don’t hesitate to reach out directly to us! we will provide you with all information you need to find your new best friend.</p>
     <a href="/contact.html" class="button">I need more information</a>
 </section>
 
-<!-- banner -->
-<section class="bg-featured padded center">
-    <h2>Find out more about the <br>adoption process</h2>
+<!-- dogs grid short -->
+<section class="grid-center padded">
+  {% for dog in page.dogs | limit: 4 %}
+  
+      <div class="col-3 center padded-1">
+          <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
+          <h3>{{dog.name}}</h3>
+          <p>I am {{dog.age}} years old.</p>
+      </div>
+      
+  {% endfor %}
+  
+  </section>
+
+<!-- banner #make jumping arrow! AOS -->
+<section class="bg-dark light-text padded center">
+    <h2 class="small-text margin-b-05">Find out more about the </h2>
     <a href="#adoption-process">
-        <i class="fa-solid fa-angle-down margin-t-2"></i>
+      <h2 class="big-text">Adoption Process</h2>
+      <i class="fa-solid fa-angle-down"></i>
     </a>
 </section>
 
 <!-- dogs grid -->
 <section class="grid-center padded">
-{% for dog in page.dogs %}
+{% for dog in page.dogs | limit: 8, offset: 4%}
 
     <div class="col-3 center padded-1">
         <div class="bg-image portrait" style="background-image: url('{{dog._image}}');"></div>
@@ -62,7 +110,7 @@ dogs:
 
 
 <!-- adoption info -->
-<section class="grid-middle padded" id="adoption-process">
+<section class="grid-middle padded bg-light" id="adoption-process">
     <div class="col-7_sm-12">
         <h3>How to adopt</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam iste tempore ipsam officia modi debitis expedita id quaerat, inventore officiis temporibus sequi. Ipsum vel neque tempore iure rerum minima.</p>

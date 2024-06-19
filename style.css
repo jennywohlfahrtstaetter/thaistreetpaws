@@ -80,6 +80,8 @@ p:last-child {
 .subtle         { opacity: 0.8;     }
 .subtitle       { font-size: 0.8rem; }
 .copyright      { font-size: 0.9rem; opacity: 0.8;}
+.small-text     { font-weight: 300;}
+.big-text       { font-size: 3rem;}
 
 /* Gridlex Flip Flex */
 
@@ -456,7 +458,7 @@ form button:hover {
 /* --------------- Negative Space Utility Classes  ---------------------- */ 
 
 .capped-width-wide      { max-width: 1600px; margin: auto; }
-.capped-width           { max-width: 1200px; margin: auto; }
+.capped-width           { max-width: 1300px; margin: auto; }
 .capped-width-narrow    { max-width: 1000px; margin: auto; }
 .capped-width-v-narrow  { max-width: 800px;  margin: auto; }
 
