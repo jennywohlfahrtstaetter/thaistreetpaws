@@ -30,6 +30,7 @@ a {border: 2px solid grey;} */
   --v-light: #FCEAEB;
   --light-text: #fff;
   --featured-text:#9D131C;
+  --logo: #E11B28;
 }
 
 /* ---------------------- Typography Styles ----------------------------- */
@@ -44,7 +45,15 @@ body {
   color: var(--dark-text);
 }
 
-h2, h3, h4, h5, h6 {
+h1 a {
+ font-size: 2.4rem;
+}
+
+h1 a:hover {
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   margin-bottom: 1.5rem;
   font-family: 'Bebas Neue', sans-serif;
@@ -60,7 +69,7 @@ p, a {
   line-height: 1.4; 
   margin-bottom: 1rem;
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 li {
@@ -90,6 +99,7 @@ p:last-child {
 .small-text     { font-weight: 300;}
 .big-text       { font-size: 3rem;}
 .bold           { font-weight: 500;}
+.red-text       { color: var(--logo)}
 
 /* Gridlex Flip Flex */
 
@@ -227,53 +237,22 @@ nav a:hover {
   color: var(--featured-text);
 }
 
-
-/* Dropdown styles */
-
-.dropdown { 
-  position: relative; 
-  display: inline-block;
-  border: 1px solid orange;
-}
-
-.dropdown-title {
-  padding: 0.25rem 0.5rem;
-  display: inline-block;
-}
-
-.dropdown-content {
-  position: absolute;
-  top: 100%;
-  left: -1rem;
-  padding: 0.5rem;
-  display:none; 
-  background-color: white;
-  z-index: 2;
-  text-align: left;
-  min-width: 10rem;
-  border: 1px solid mediumvioletred;
-}
-
-.dropdown:hover .dropdown-content{ 
-  display: block;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 0.2rem;
-}
+/* Hamburger menu */
 
 .hamburger-button {
     cursor: pointer;
     padding: 0.5rem;
     display: inline-block;
     font-weight: 200;
-    font-size: 2.5rem;
     line-height: 0.8;
-    position: fixed;
+    position: relative;
     right: 5%;
     top: 0rem;
     z-index: 4;
+  }
+
+  .hamburger-button .fa-solid {
+    font-size: 2.3rem;
   }
   
   /* Styles when the hamburger button is active  */
@@ -282,9 +261,9 @@ nav a:hover {
   }
   
   
-  .mobile-menu {
+  .mob-menu {
     display: none; 
-    background-color: var(--featured);
+    background-color: var(--dark);
     padding: 5%;
     position: fixed; 
     z-index:3;
@@ -295,7 +274,7 @@ nav a:hover {
     text-align: center;
   }
   
-  .mobile-menu a {
+  .mob-menu a {
     text-decoration: none; 
     color: inherit; 
     padding: 2%;
@@ -572,9 +551,15 @@ form button:hover {
 
 @media(max-width:64em) {
 
-	.md-show { display: block; }
+	.md-show { display: flex; }
 	.md-hide { display: none;  }
 
+  .md-center {text-align: center;}
+  .md-margin-b {margin-bottom: 2rem;}
+  .md-margin-t {margin-top: 2rem;}
+  .md-landscape {padding-bottom: 66%; background-position: top;}
+  .md-bg {background-color: var(--v-light);}
+  .md-padded-0 {padding: 0;}
 }
 
 /* ------------------- SM Media Query (48em / 768px) --------------- */ 
@@ -604,7 +589,35 @@ form button:hover {
   .sm-portrait      { padding-bottom: 125%; }
   .sm-square        { padding-bottom: 100%; }
 
+  .sm-block {display: block;}
+  .sm-flex-flip-column {flex-direction: column-reverse;}
+  .sm-margin-lr {margin-right: 2rem; margin-left: 2rem;}
+
+  h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 1.8rem; }
+  h4 { font-size: 1.6rem; }
+  h5 { font-size: 1.4rem; }
+  h6 { font-size: 1.2rem; }
+
+  p, a, li {
+    line-height: 1.2; 
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  /* dots sind sonst im slider - do not remove */
+  .slick-dots li button::before { margin-top: 0.8rem;}
+
+
 }
+
+
 
 /* ---------------- XS Media Query (36em / 576px) ------------------- */ 
 /* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 

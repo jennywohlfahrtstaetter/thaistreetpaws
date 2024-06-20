@@ -175,8 +175,8 @@ dogs:
     <h2 class="col-12 center">Find your new best friend here</h2>
 </section>
 
-<!-- dogs grid all -->
-<section class="grid-center padded">
+<!-- dogs grid all desktop -->
+<section class="grid-center padded md-hide">
     {% for dog in page.dogs %}
     
         <div class="col-3 center padded-1 margin-b-2">
@@ -191,4 +191,22 @@ dogs:
             {% endif %}
         </div>
     {% endfor %}
+</section>
+
+<!-- dogs grid all medium -->
+<section class="grid-center padded md-show">
+   {% for dog in page.dogs %}
+   
+       <div class="col-4 center padded-1 margin-b-2">
+           <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
+           <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
+           <p class="margin-b-0">I am {{dog.age}} years old.</p>
+           {% if dog.male == true %}
+              <p>I am male.</p>
+           {% endif %}
+           {% if dog.female == true %}
+              <p>I am female.</p>
+           {% endif %}
+       </div>
+   {% endfor %}
 </section>

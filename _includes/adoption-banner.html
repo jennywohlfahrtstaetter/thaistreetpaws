@@ -3,7 +3,7 @@
     <h2 class="center">Meet the pups</h2>
     
     <!-- slick carousel with loop (front matter from adopt page) -->
-    <div class="slick-carousel">
+    <div class="slick-carousel responsive">
         {% assign all-dogs = site.pages | where: 'path', 'all-dogs.html' | first %}
         {% for dog in all-dogs.dogs %}
         <div class="slider-item">

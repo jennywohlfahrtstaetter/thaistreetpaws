@@ -11,12 +11,27 @@ info-dog_image: /images/TSP-9.jpg
   <h2 class="col-12 center">Meet the pups</h2>
 </section>
 
-<!-- dogs grid short -->
-<section class="grid-center padded">
+<!-- dogs grid short desktop-->
+<section class="grid-center padded md-hide">
   {% assign all-dogs = site.pages | where: 'path', 'all-dogs.html' | first %}
   {% for dog in all-dogs.dogs limit: 4 %}
   
       <div class="col-3 center padded-1">
+          <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
+          <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
+          <p>I am {{dog.age}} years old.</p>
+      </div>
+      
+  {% endfor %}
+  
+</section>
+
+<!-- dogs grid short medium-->
+<section class="grid-center padded md-show">
+  {% assign all-dogs = site.pages | where: 'path', 'all-dogs.html' | first %}
+  {% for dog in all-dogs.dogs limit: 3 %}
+  
+      <div class="col-4 center padded-1">
           <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
           <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
           <p>I am {{dog.age}} years old.</p>
@@ -35,8 +50,8 @@ info-dog_image: /images/TSP-9.jpg
     </a>
 </section>
 
-<!-- dogs grid -->
-<section class="grid-center padded">
+<!-- dogs grid desktop -->
+<section class="grid-center padded md-hide">
 {% for dog in all-dogs.dogs limit: 8 offset: 4%}
 
     <div class="col-3 center padded-1 margin-b-2">
@@ -51,6 +66,23 @@ info-dog_image: /images/TSP-9.jpg
       <a href="/all-dogs.html" class="button">See all dogs</a>
     </div>
 </section>
+
+<!-- dogs grid medium -->
+<section class="grid-center padded md-show">
+  {% for dog in all-dogs.dogs limit: 6 offset: 3 %}
+  
+      <div class="col-4 center padded-1 margin-b-2">
+          <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
+          <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
+          <p>I am {{dog.age}} years old.</p>
+      </div>
+      
+  {% endfor %}
+  
+      <div>
+        <a href="/all-dogs.html" class="button">See all dogs</a>
+      </div>
+  </section>
 
 
 <!-- adoption info -->
@@ -69,13 +101,13 @@ info-dog_image: /images/TSP-9.jpg
       <p>If you're interested in one of the dogs please send a message so we can start the process.</p>
       <a href="#" class="button">Reach out to us</a>
     </div>
-    <div class="col-5 padded">
-      <div class="bg-image square sm-hide" style="background-image: url('{{page.adopt-dog_image}}');"></div>
+    <div class="col-5 padded sm-hide">
+      <div class="bg-image square" style="background-image: url('{{page.adopt-dog_image}}');"></div>
     </div>
 
     <!-- more info -->
-    <div class="col-5 padded">
-      <div class="bg-image square sm-hide" style="background-image: url('{{page.info-dog_image}}');"></div>
+    <div class="col-5 padded sm-hide">
+      <div class="bg-image square" style="background-image: url('{{page.info-dog_image}}');"></div>
     </div>
     <div class="col-7_sm-12-middle padded">
       <h3>Get more information about specific dogs</h3>
@@ -101,7 +133,7 @@ info-dog_image: /images/TSP-9.jpg
         </ul>
           <p>Costs vary relative to the size of the dog, as well as the airline. Typically, costs range between US$350 to US$500.</p>
     </div>
-    <div class="col-5 padded">
-      <div class="bg-image square sm-hide" style="background-image: url('{{page.cost-dog_image}}');"></div>
+    <div class="col-5 padded sm-hide">
+      <div class="bg-image square" style="background-image: url('{{page.cost-dog_image}}');"></div>
     </div>
 </section>
