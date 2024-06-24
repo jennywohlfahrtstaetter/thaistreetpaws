@@ -1,9 +1,15 @@
 $(document).ready(function(){
+  console.log( "ready" );
 
   $(".hamburger-button").click(function(){
 
     $(this).toggleClass('active');
     $('.mob-menu').slideToggle();
+  });
+
+  $("#social-share-button").click(function(){
+    $(this).toggleClass('active');
+    $('#social-share')fadeToggle();
   });
 
   $('.slick-carousel').slick({

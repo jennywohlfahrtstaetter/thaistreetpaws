@@ -134,6 +134,7 @@ p a:hover {
     line-height: 1;
     padding: 0.5rem 1.5rem;
     border: 2px solid;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -447,7 +448,11 @@ form button:hover {
 
 
 
-
+/* social share */
+.social-share i { 
+  font-size: 2rem;
+  display: inline-block;
+}
 
 
 /* --------------- Negative Space Utility Classes  ---------------------- */ 
@@ -555,11 +560,13 @@ form button:hover {
 	.md-hide { display: none;  }
 
   .md-center {text-align: center;}
+  .md-left {text-align: left;}
   .md-margin-b {margin-bottom: 2rem;}
   .md-margin-t {margin-top: 2rem;}
   .md-landscape {padding-bottom: 66%; background-position: top;}
   .md-bg {background-color: var(--v-light);}
   .md-padded-0 {padding: 0;}
+
 }
 
 /* ------------------- SM Media Query (48em / 768px) --------------- */ 
@@ -611,10 +618,12 @@ form button:hover {
     font-size: 1rem;
   }
 
+  .social-share i {font-size: 1.2rem;}
+
   /* dots sind sonst im slider - do not remove */
   .slick-dots li button::before { margin-top: 0.8rem;}
 
-
+.active {color: orange;}
 }
 
 
@@ -631,4 +640,6 @@ form button:hover {
       font-weight: 300;
       font-family: 'Martel', serif; 
     }
+
+    .xs-margin-l-0 {margin-left: 0;}
 }
