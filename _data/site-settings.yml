@@ -3,10 +3,10 @@ seo:
   title: Default SEO Title
   description: 
   keywords: 
-  social_image: 
+  social_image: /images/logo.png
   author: 
-  favicon_image: 
+  favicon_image: /images/favicon.png
 social: 
-  instagram_username:
-  facebook_url:
+  instagram_username: @thaistreetpaws_dogrescue 
+  facebook_url: https://www.facebook.com/thaistreetpawsrescue/
   twitter_username: 

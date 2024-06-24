@@ -456,6 +456,11 @@ form button:hover {
   display: inline-block;
 }
 
+.active {
+  color: var(--light-text);
+  border: 2px solid var(--dark);
+  background-color: var(--dark)
+}
 
 /* --------------- Negative Space Utility Classes  ---------------------- */ 
 
@@ -541,6 +546,7 @@ form button:hover {
 /* ------------------------ Responsive Styles -------------------------- */
 
 /* General CSS Responsive Styles (Apply everywhere unless overriden) */ 
+.default-hide {display: none;}
 
 .xs-show, 
 .sm-show,
@@ -625,7 +631,6 @@ form button:hover {
   /* dots sind sonst im slider - do not remove */
   .slick-dots li button::before { margin-top: 0.8rem;}
 
-.active {color: orange;}
 }
 
 

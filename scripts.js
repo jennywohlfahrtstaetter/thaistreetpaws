@@ -8,8 +8,8 @@ $(document).ready(function(){
   });
 
   $("#social-share-button").click(function(){
-    $(this).toggleClass('active');
-    $('#social-share')fadeToggle();
+    $(this).addClass('active');
+    $('#social-share').fadeIn(1000);
   });
 
   $('.slick-carousel').slick({
