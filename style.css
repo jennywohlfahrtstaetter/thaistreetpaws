@@ -75,7 +75,7 @@ p, a {
 li {
   line-height: 1.4;
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 
@@ -119,12 +119,14 @@ a:hover {
   color: var(--featured); 
 }
 
-p a {
+p a,
+li a {
     text-decoration: none;
     border-bottom: 1px solid;
 }
 
-p a:hover { 
+p a:hover,
+li a:hover { 
   color: var(--featured-text); 
 }
 
@@ -611,12 +613,12 @@ form button:hover {
   h5 { font-size: 1.4rem; }
   h6 { font-size: 1.2rem; }
 
-  p, a, li {
+  /* p, a, li {
     line-height: 1.2; 
     margin-bottom: 1rem;
     font-weight: 300;
     font-size: 1rem;
-  }
+  } */
 
   .social-share i {font-size: 1.2rem;}
 
