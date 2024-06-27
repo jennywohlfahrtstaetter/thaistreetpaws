@@ -542,12 +542,11 @@ form button:hover {
 .margin-tb { margin-top: 5%; margin-bottom: 5%; }
 .margin-lr { margin-left: 5%; margin-right: 5%; }
 
+/* jQuery */
+.default-hide {display: none;
 
 /* ------------------------ Responsive Styles -------------------------- */
-
 /* General CSS Responsive Styles (Apply everywhere unless overriden) */ 
-.default-hide {display: none;}
-
 .xs-show, 
 .sm-show,
 .md-show {
