@@ -543,7 +543,7 @@ form button:hover {
 .margin-lr { margin-left: 5%; margin-right: 5%; }
 
 /* jQuery */
-.default-hide {display: none;
+.default-hide {display: none;}
 
 /* ------------------------ Responsive Styles -------------------------- */
 /* General CSS Responsive Styles (Apply everywhere unless overriden) */ 
