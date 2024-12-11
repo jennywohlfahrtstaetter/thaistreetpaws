@@ -4,8 +4,8 @@
     
     <!-- slick carousel with loop (front matter from adopt page) -->
     <div class="slick-carousel responsive">
-        {% assign all-dogs = site.pages | where: 'path', 'all-dogs.html' | shuffle %}
-        {% for dog in all-dogs.dogs | slice: 0, 15 %}
+        {% assign all-dogs = site.pages | where: 'path', 'all-dogs.html' | first %}
+        {% for dog in all-dogs.dogs | limit: 15 %}
         <div class="slider-item">
             <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
         </div>
