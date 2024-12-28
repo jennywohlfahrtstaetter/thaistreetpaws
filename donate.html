@@ -1,0 +1,23 @@
+---
+layout: default
+title: Donate
+seo:
+  title:
+  description: >-
+    Donate to Thai Street Paws Dog Rescue today.
+  social_image: /images/logo.png
+  keywords: 'donate'
+  hide-from-google: false
+---
+{% assign index = site.pages | where: 'path', 'index.html' | first %}
+
+<section class="grid bg-image bg-overlay" style="background-image: url('{{index.donation-banner_image}}')">
+    <div class="col-12 light-text center vh60 grid-middle">
+        <div class="col-12">
+            <h2>Make your donation through one of these platforms:</h2>
+            <a href="{{index.paypal_url}}" class="button margin-r-1 sm-block sm-margin-lr" target="_blank">PayPal</a>
+            <a href="{{index.k9aid_url}}" class="button margin-r-1 sm-block sm-margin-lr" target="_blank">K9Aid</a>
+            <a href="{{index.wise_url}}" class="button margin-r-1 sm-block sm-margin-lr" target="_blank">Wise</a>
+        </div>
+    </div>
+</section>
