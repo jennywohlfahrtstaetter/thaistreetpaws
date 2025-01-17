@@ -652,7 +652,7 @@ seo:
 </section>
 
 <!-- dogs grid all desktop -->
-<section class="grid-center padded md-hide sm-hide">
+<section class="grid-center padded md-hide">
     {% for dog in page.dogs %}
     
         <div class="col-3 center padded-1 margin-b-2">
@@ -678,28 +678,6 @@ seo:
    {% for dog in page.dogs %}
    
        <div class="col-4 center padded-1 margin-b-2">
-           <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
-           <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
-
-           {% if dog.rescued-in %}
-                <p class="margin-b-0">I was rescued in {{dog.rescued-in}}.</p>
-            {% endif %}
-
-           {% if dog.male == true %}
-              <p>I am male.</p>
-           {% endif %}
-           {% if dog.female == true %}
-              <p>I am female.</p>
-           {% endif %}
-       </div>
-   {% endfor %}
-</section>
-
-<!-- dogs grid all sm -->
-<section class="grid-center padded sm-show">
-   {% for dog in page.dogs %}
-   
-       <div class="col-12 center padded-1 margin-b-2">
            <div class="bg-image portrait" style="background-image: url('{{dog.dog_image}}');"></div>
            <h3 class="margin-t-1 margin-b-0">{{dog.name}}</h3>
 
